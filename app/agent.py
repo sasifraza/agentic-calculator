@@ -1,8 +1,11 @@
 import anthropic
 import math
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
+print("API KEY loaded:", os.getenv("ANTHROPIC_API_KEY") is not None)
 
 TOOLS = [
     {
